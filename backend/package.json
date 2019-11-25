@@ -19,7 +19,8 @@
   },
   "homepage": "https://github.com/PanGan21/mern-eth-counter#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "express-validator": "^6.3.0"
   },
   "devDependencies": {
     "concurrently": "^5.0.0",
