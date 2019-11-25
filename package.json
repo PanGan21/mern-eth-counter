@@ -1,0 +1,27 @@
+{
+  "name": "mern-eth-counter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server",
+    "server": "nodemon server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PanGan21/mern-eth-counter.git"
+  },
+  "author": "Panagiotis Ganelis",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PanGan21/mern-eth-counter/issues"
+  },
+  "homepage": "https://github.com/PanGan21/mern-eth-counter#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "concurrently": "^5.0.0",
+    "nodemon": "^2.0.1"
+  }
+}
