@@ -1,11 +1,11 @@
 import React from "react";
 import "./App.css";
-import Counter from "./components/Counter";
+import Landing from "./containers/Landing/Landing";
 
 const App = () => {
   return (
     <div className="App">
-      <Counter />
+      <Landing />
     </div>
   );
 };

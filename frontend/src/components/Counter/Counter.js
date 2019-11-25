@@ -1,8 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Counter.css";
 
-const Counter = () => {
-  const [count, setCount] = useState(0);
+const Counter = ({ count, setCount }) => {
   return (
     <div className="counter">
       <p>You clicked {count} times</p>
