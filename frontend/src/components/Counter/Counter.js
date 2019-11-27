@@ -1,11 +1,11 @@
 import React from "react";
 import "./Counter.css";
 
-const Counter = ({ count, increment }) => {
+const Counter = ({ count, onClickHandler }) => {
   return (
     <div className="counter">
       <p>You clicked {count} times</p>
-      <button onClick={increment}>Click me</button>
+      <button onClick={onClickHandler}>Click me</button>
     </div>
   );
 };

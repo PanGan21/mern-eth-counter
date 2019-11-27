@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Counter from "../../components/Counter/Counter";
 
@@ -7,14 +7,28 @@ const Home = () => {
 
   const increment = async () => {
     try {
-      const res = await axios.post("/api/increment", { count: count });
+      await axios.put("/api/increment", { count: count });
+      console.log("Increment success");
+      getCounter();
+    } catch (err) {
+      console.log(err.message);
+    }
+  };
+
+  const getCounter = async () => {
+    try {
+      const res = await axios.get("/api/increment");
       setCount(res.data.count);
     } catch (err) {
       console.log(err.message);
     }
   };
 
-  return <Counter count={count} increment={increment} />;
+  useEffect(() => {
+    getCounter();
+  });
+
+  return <Counter count={count} onClickHandler={increment} />;
 };
 
 export default Home;
