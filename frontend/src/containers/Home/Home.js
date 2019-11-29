@@ -17,7 +17,7 @@ const Home = () => {
 
   const getCounter = async () => {
     try {
-      const res = await axios.get("/api/increment");
+      const res = await axios.get("/api/retrieve");
       setCount(res.data.count);
     } catch (err) {
       console.log(err.message);
