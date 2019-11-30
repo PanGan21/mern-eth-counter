@@ -3,12 +3,12 @@ FROM node
 RUN npm install -g nodemon
 
 RUN mkdir -p /app/backend
-WORKDIR /app/server
+WORKDIR /app/backend
 
-COPY package*.json /app/server/
+COPY package*.json ./
 
 RUN npm install
 
-COPY . /app/server
+COPY . .
 
 CMD ["nodemon", "server.js"]
