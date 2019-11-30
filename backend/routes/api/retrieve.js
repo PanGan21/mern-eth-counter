@@ -2,10 +2,15 @@ const express = require("express");
 const router = express.Router();
 
 router.get("/", async (req, res) => {
-  if (!req.session.count) {
-    req.session.count = 0;
+  try {
+    if (!req.session.count) {
+      req.session.count = 0;
+    }
+    res.send({ count: req.session.count });
+  } catch (err) {
+    console.log(err.message);
+    res.status(500).send("Server Error");
   }
-  res.send({ count: req.session.count });
 });
 
 module.exports = router;

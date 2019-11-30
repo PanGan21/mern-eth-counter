@@ -16,7 +16,7 @@ router.put(
 
     try {
       req.session.count = req.body.count + 1;
-      res.send("Updated");
+      res.send({ count: req.session.count });
     } catch (err) {
       console.log(err.message);
       res.status(500).send("Server Error");

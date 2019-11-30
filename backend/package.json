@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node server",
     "server": "nodemon server",
-    "dev": "concurrently \"npm run server\" \"cd ../frontend && npm start\""
+    "test": "jest",
+    "dev": "concurrently \"npm test && npm run server\" \"cd ../frontend && npm start\""
   },
   "repository": {
     "type": "git",
@@ -26,7 +27,9 @@
     "express": "^4.17.1",
     "express-session": "^1.17.0",
     "express-validator": "^6.3.0",
-    "mongoose": "^5.7.12"
+    "jest": "^24.9.0",
+    "mongoose": "^5.7.12",
+    "supertest": "^4.0.2"
   },
   "devDependencies": {
     "concurrently": "^5.0.0",
