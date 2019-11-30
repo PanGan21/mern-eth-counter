@@ -7,6 +7,7 @@
     "start": "node server",
     "server": "nodemon server",
     "test": "jest",
+    "start-test": "npm test && npm run server",
     "dev": "concurrently \"npm test && npm run server\" \"cd ../frontend && npm start\""
   },
   "repository": {
