@@ -1,9 +1,9 @@
 version: "3.7"
 
 services:
-  test:
-    build: ./backend
-    command: npm test
+  # test:
+  #   build: ./backend
+  #   command: npm test
   backend:
     container_name: backend
     build: ./backend
