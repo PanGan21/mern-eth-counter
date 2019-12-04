@@ -6,7 +6,7 @@ app.use(express.json({ extended: false }));
 
 app.get("/getContract", (req, res) => {
   try {
-    res.send(data.abi);
+    res.json({ abi: data.abi, address: data.networks["5777"].address });
   } catch (err) {
     console.log(err.message);
   }

@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Counter from "../../components/Counter/Counter";
 import Web3 from "web3";
-import { contractAddress } from "./contractAddress";
 
 const Home = () => {
   const [count, setCount] = useState(0);
@@ -12,7 +11,8 @@ const Home = () => {
       new Web3.providers.HttpProvider("http://localhost:9545")
     );
     const res = await axios.get("/getContract");
-    const abi = res.data;
+    const abi = res.data.abi;
+    const contractAddress = res.data.address;
     const contract = new web3.eth.Contract(abi, contractAddress);
     const accounts = await web3.eth.personal.getAccounts();
     const myAccount = accounts[0];
@@ -30,7 +30,8 @@ const Home = () => {
       new Web3.providers.HttpProvider("http://localhost:9545")
     );
     const res = await axios.get("/getContract");
-    const abi = res.data;
+    const abi = res.data.abi;
+    const contractAddress = res.data.address;
     const contract = new web3.eth.Contract(abi, contractAddress);
     const newCount = await contract.methods.getCount().call();
     setCount(newCount);
