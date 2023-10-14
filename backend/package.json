@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/PanGan21/mern-eth-counter#readme",
   "dependencies": {
-    "config": "^3.2.4",
+    "config": "^3.3.8",
     "connect-mongo": "^3.1.2",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
